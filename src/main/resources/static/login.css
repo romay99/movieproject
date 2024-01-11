@@ -1,0 +1,54 @@
+/* login.css */
+
+body {
+    background-color: #e0f7fa; /* 연한 하늘색 배경 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+h2{
+    align-content: center;
+}
+.login-container {
+    background-color: #ffffff;
+    padding: 40px; /* 양 옆 폭 조절 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px; /* 전체 크기 키우기 */
+    text-align: center; /* h2 태그를 가운데 정렬 */
+}
+
+.form-group {
+    margin-bottom: 30px; /* 각 폼 그룹 간격 키우기 */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* 라벨 아래 간격 키우기 */
+}
+
+.form-group input {
+    width: calc(100% - 20px); /* 양옆 여백 고려하여 크기 조절 */
+    padding: 15px; /* 내부 여백 키우기 */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* 모서리 둥글게 키우기 */
+    margin-bottom: 15px; /* 입력 요소 간격 키우기 */
+}
+
+.form-group button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px; /* 버튼 내부 여백 키우기 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
