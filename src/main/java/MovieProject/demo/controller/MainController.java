@@ -11,10 +11,4 @@ public class MainController {
         return "mainpage";
     }
 
-    @RequestMapping("/login")
-    public String loginPage() {
-        return "loginpage";
-    }
-
-
 }

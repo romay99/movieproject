@@ -7,8 +7,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 @RequiredArgsConstructor
 public class ApiController {
-
     private final ApiService apiService;
-
 
 }
