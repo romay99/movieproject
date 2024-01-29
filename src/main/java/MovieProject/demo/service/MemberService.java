@@ -12,7 +12,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    public void signUpMember(MemberSignUpDto dto){
+    public void signUpMember(MemberSignUpDto dto) {
         MemberEntity newMember = MemberEntity.builder()
                 .member_id(dto.member_id)
                 .member_pw(dto.member_pw)
@@ -22,5 +22,10 @@ public class MemberService {
                 .build();
 
         memberRepository.save(newMember);
+    }
+
+    public boolean isIdPresent(String memberId) {
+
+        return false;
     }
 }
