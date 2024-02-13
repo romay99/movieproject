@@ -33,15 +33,15 @@ public class MemberController {
     public ResponseEntity<String> signUpMember(@RequestBody MemberSignUpDto dto) {
         System.out.println(dto);
         memberService.signUpMember(dto);
-        return ResponseEntity.ok().body("환영합니다" + dto.member_name + "님!");
+        return ResponseEntity.ok().body("환영합니다 " + dto.member_name + " 님!");
     }
 
     @PostMapping("/idCheck")
-    public ResponseEntity<String> isIdPresent(String memberId){
-        if (memberService.isIdPresent(memberId)){
-            return ResponseEntity.ok().build();
-        }else{
-            return ResponseEntity.badRequest().build();
+    public ResponseEntity<String> idCheck(@RequestBody MemberSignUpDto dto){
+        if(memberService.isIdPresent(dto.getMember_id())){
+            return ResponseEntity.badRequest().body("이미 존재하는 ID 입니다.");
         }
+        return ResponseEntity.ok().body("사용가능한 ID 입니다.");
     }
+
 }
