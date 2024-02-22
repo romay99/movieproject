@@ -25,6 +25,8 @@ public class MemberService {
     }
 
     public boolean isIdPresent(String memberId) {
-        return memberRepository.findByMemberId(memberId).isPresent();
+        return memberRepository.findByUsername(memberId).isPresent();
     }
+
+
 }

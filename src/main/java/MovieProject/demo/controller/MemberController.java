@@ -1,5 +1,6 @@
 package MovieProject.demo.controller;
 
+import MovieProject.demo.dto.LoginDto;
 import MovieProject.demo.dto.MemberSignUpDto;
 import MovieProject.demo.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -13,16 +14,6 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
 
     private final MemberService memberService;
-
-    @GetMapping("/login")
-    public String loginPage() {
-        return "loginpage";
-    }
-
-    @PostMapping("/login")
-    public void memberLogin() { // JWT 토큰 방식으로 개발해야함
-
-    }
 
     @GetMapping("/signup")
     public String signUpPage() {
